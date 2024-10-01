@@ -32,23 +32,21 @@ def performCrossProduct(v1, v2):
     return np.cross(v1, v2)
 
 
-def runSimulation(all_combinations,
-                  save_dir,
+def runSimulation(all_combinations, # List of tupples of number of rotations per hour in each axis. eg: [(5, 5, 5), (0, 5, 0)]
+                  save_dir,         # Directory where the propagation are saved
                   run_mode='vane_detumbling',
                   simulation_start_epoch=DateTime(2024, 6, 1, 0).epoch(),
                   simulation_end_epoch=DateTime(2024, 6, 30, 0).epoch(),
                   initial_orbital_elements=np.array([None]),
                   initial_sun_angles_degrees=[0, 0],
-                  wings_optical_model=np.array([None]), # numpy array
-                  vanes_optical_model=np.array([None]), # numpy array
+                  wings_optical_model=np.array([None]),
+                  vanes_optical_model=np.array([None]),
                   include_shadow_bool=False,
                   vane_speed_rad_s=2*np.pi,
                   vanes_dof=np.array([None]),
                   output_frequency_in_seconds_=10,
                   create_sub_dirs=True,
                   overwrite_previous=False):
-    # Make it such that when the simulation is run, a file is created and an ancillary info file is also generated with all the options
-
     # Run mode specific information
     if ('vane_detumbling' in run_mode):
         import constants as sail_model

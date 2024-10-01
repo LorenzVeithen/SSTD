@@ -31,12 +31,12 @@ boom_length = 7.                # m
 boom_attachment_point = 0.64    # m
 
 # Wings characteristics
-wing_optical_coefficients = np.array([0., 0., 1., 1., 0., 0., 2/3, 2/3, 1., 1.])    # [-]
+wing_optical_coefficients = ACS3_opt_model_coeffs_set    # [-]
 
 # Vane characteristics
 vane_angle = np.deg2rad(30.)    # deg
 vane_side_length = 0.5          # m
-vane_optical_model_str = "single_ideal_optical_model"
+vane_optical_model_str = "ACS3_optical_model"
 vanes_rotational_dof = np.array([[True, True], [True, True], [True, True], [True, True]])
 
 # Detumbling algorithm constants
