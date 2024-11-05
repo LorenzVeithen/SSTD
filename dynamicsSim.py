@@ -178,7 +178,7 @@ class sailCoupledDynamicsProblem:
             )
         else:
             acceleration_settings_acs3 = dict(
-                Earth=[propagation_setup.acceleration.point_mass_gravity()],
+                Earth=[propagation_setup.acceleration.spherical_harmonic_gravity(2, 0)],    # include J2
                 Sun=[propagation_setup.acceleration.radiation_pressure()]
             )
 

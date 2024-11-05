@@ -9,6 +9,6 @@ runSimulation([(5, 5, 5)],  # rotations per hour in each axis of the body-fixed 
                   run_mode='LTT',
                   simulation_start_epoch=DateTime(2024, 6, 1, 0).epoch(),
                   simulation_end_epoch=DateTime(2024, 6, 30, 0).epoch(),
-                  output_frequency_in_seconds_=100,
+                  output_frequency_in_seconds_=3600,
                   overwrite_previous=True)
 

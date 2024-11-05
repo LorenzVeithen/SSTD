@@ -31,7 +31,7 @@ boom_length = 7.                # m
 boom_attachment_point = 0.64    # m
 
 # Wings characteristics
-wing_optical_coefficients = ACS3_opt_model_coeffs_set    # [-]
+wing_optical_coefficients = ACS3_opt_model_coeffs_set    # [-] np.array([0.1, 0.57, 0.74, 0.23, 0.16, 0.2, 2/3, 2/3, 0.03, 0.6])
 
 # Vane characteristics
 vane_angle = np.deg2rad(30.)    # deg
